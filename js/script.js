@@ -31,6 +31,10 @@ window.onscroll = function() {myFunction()};
         }
     }  
     
+    ghostButton1.onclick = function() {
+        ghostButton1.scrollTop = 1000;
+    }
+    
 
 
 
