@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navbar {
+    visibility:hidden;
+    width: 80%;
+    padding: 20px 10%;
+    position: fixed;
+    top: -100px;
+    transition: 1s;
+}
+
+#logo {
+    float: left;
+}
+
+#logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;   
+    padding: 7px 16px;
+    display: block;
+}
+
+#logo a:hover {
+    color:red;
+    background-color: #4e4e4e;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbar ul li {
+    float: right;
+}
+
+#visibleList {
+    display: none;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+}
+
+#navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: red;
+    background-color: #4e4e4e;
+}
+
+#home {
+ 
+    background-image: url(../img/homeBackground.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow:0 0 0 500px rgba(0, 0, 0, 0.33) inset;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center
+}
+
+#homeText {
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
+#homeText h1 {
+    font-size: 45px;
+    font-weight: 100;
+    margin: 10px;
+}
+
+#homeText p {
+    margin: 0;
+}
+
+#ghostButton1 {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 8px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+}
+
+#ghostButton2 {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 8px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+}
+
+#ghostButton1:hover {
+    background-color: #4e4e4e;
+}
+
+#ghostButton2:hover {
+    background-color: #4e4e4e;
+}
+
+#services {
+    min-height: 570px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-content: space-around;
+}
+
+#servicesText {
+    flex: 1 100%;
+    text-align: center;
+    color: #313131;
+}
+
+.servicesImg {
+    float: left;
+    width: 300px;
+    text-align: center;
+    color: #505050;
+    margin:  0 30px;
+}
+
+
+figure {
+    margin: 0 100px; 
+    width: 100px;
+    height: 100px;
+}
+
+figure img {
+    width: 94px;
+    height: 94px;
+    border: solid grey;
+    border-radius: 50%;
+}
+
+.thirdFigureImg {
+    width: 95px;
+    height: 95px;
+    background-image: url(../img/EllipseSupport1.png);
+    background-size: cover;
+    border: solid grey;
+    border-radius: 50%;
+}
+
+.thirdFigureImg:hover {
+    background-image: url(../img/EllipseSupport2.png);
+    background-color: #c0301c;
+}
+
+.firstFigureImg {
+    display: table-cell;
+    border-radius: 70px;
+    border: solid grey;
+    text-align: center;
+    color: #c0301c;
+    width: 110px;
+    height: 95px;
+    vertical-align: middle;
+    margin: auto;
+    font-size: 52px;
+}
+
+.firstFigureImg:hover {
+    background-color: #c0301c;
+    color: white;
+}
+
+
+#paralax {
+    height: 370px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/paralax1.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    box-shadow:0 0 0 500px rgba(256, 0, 0, 0.33) inset;
+}
+
+#paralaxContainer {
+    width: 550px;
+    color: white;
+    text-align: center;
+}
+
+
+/* ------------------------  MAX WIDTH < 950px  --------------------------------- */
+
+
+@media all and (max-width: 950px){
+
+#navbar ul li a {
+    padding: 14px 4px;
+    font-size: 14px;
+} 
+    
+}
+
+
+/* ------------------------  MAX WIDTH < 650px  --------------------------------- */
+
+
+@media all and (max-width: 650px) {
+
+#visibleList {
+    display: block;
+}
+    
+#visibleList:hover {
+    background-color: brown;
+}
+    
+#navbar ul {
+    float: right;
+}
+    
+#navbar ul li {
+    clear: both;
+}
+    
+.invisibleList {
+    display: none;
+}
+    
+#navbar ul:hover .invisibleList {
+    display: block;
+}
+
+#homeText h1 {
+    font-size: 35px;    
+}
+    
+}
