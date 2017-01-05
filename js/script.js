@@ -1,5 +1,26 @@
+var adware = document.getElementById('adware'),
+    closeBtn = document.getElementById('closeBtn'),
+    navbar = document.getElementById('navbar'),
+    homeText = document.getElementById('homeText'),
+    ghostButton1 = document.getElementById('ghostButton1'),
+    ghostButton2 = document.getElementById('ghostButton2'),
+    firstFigureImgArr = document.getElementsByClassName('firstFigureImg'),
+    thirdFigureImg = document.getElementById('thirdFigureImg'),
+    works = document.getElementById('works'),
+    inputs = document.getElementsByTagName('input'),
+    textarea = document.getElementById('textarea'),
+    consult = document.getElementById('consult'),
+    consultBtn = document.getElementsByClassName('consultBtn');
+    
+
+var timer1,
+    timer2,
+    consultInterval;
+
 var home = document.getElementById('home');
 home.style.minHeight = window.innerHeight + 'px';
+
+
 
 window.onload = function() {
 
@@ -7,6 +28,30 @@ window.onload = function() {
         myFunction();
         showPortfolioElements();
     };
+    
+    setTimeout(showNavbar, 1000);
+    setTimeout(showHomeText, 2000);
+    consultInterval = setInterval(showConsult, 8000);
+        
+    
+    function showNavbar(){
+        navbar.style.visibility = 'visible';
+        navbar.style.top = '0px';
+    }    
+    
+    function showHomeText() {
+        homeText.style.opacity = '1';
+    }
+    
+    function showPortfolioElements() {
+        if (document.body.scrollTop > 920) {
+            works.style.display = 'block';
+        }
+    }
+    
+    function showConsult(){
+        consult.style.bottom = '0';
+    }
     
     function myFunction() {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -19,37 +64,17 @@ window.onload = function() {
     }
     
     
-    function showPortfolioElements() {
-        if (document.body.scrollTop > 920) {
-            works.style.display = 'block';
-        }
+    consultBtn[0].onclick = function() {
+        consult.style.bottom = '-200px';
     }
     
-    var adware = document.getElementById('adware');
-    var closeBtn = document.getElementById('closeBtn');
-    var navbar = document.getElementById('navbar');
-    var homeText = document.getElementById('homeText');
-    var ghostButton1 = document.getElementById('ghostButton1');
-    var ghostButton2 = document.getElementById('ghostButton2');
-    var firstFigureImgArr = document.getElementsByClassName('firstFigureImg');
-    var thirdFigureImg = document.getElementById('thirdFigureImg');
-    var works = document.getElementById('works');
-    
-    var timer1,
-        timer2;
-    
-    setTimeout(showNavbar, 1000);
-    setTimeout(showHomeText, 2000);
-    
-    
-    function showNavbar(){
-        navbar.style.visibility = 'visible';
-        navbar.style.top = '0px';
-    }    
-    
-    function showHomeText() {
-        homeText.style.opacity = '1';
+    consultBtn[1].onclick = function() {
+        clearInterval(consultInterval);
+        consult.style.bottom = '-250px';
     }
+    
+    
+    
     var scrollTimer;
     var counter = 0;
     function scrollTopButton(){
@@ -104,8 +129,73 @@ window.onload = function() {
          thirdFigureImg.style.backgroundImage = 'url(../project_brain2/img/EllipseSupport2.png)';
          thirdFigureImg.style.backgroundColor = '#c0301c';
      }
-    
-    
 
+     
 }
+
+window.addEventListener("load", checkNullField , false);
+window.addEventListener("load", init, false);
+                        
+                        
+    function checkNullField() {
+        document.forms[0].addEventListener("submit", function(e) {
+            if (inputs[0].value.length == 0 || inputs[1].value.length == 0 || inputs[2].value.length == 0 || inputs[3].value.length == 0 || textarea.value.length == 0) {
+                e.preventDefault();
+                alert("Заполните пожалуйста все строки!");
+            }
+        }, false);
+
+    }
+
+
+    function init() {
+
+        for (var i = 0; i < inputs.length; i++) {
+            var e = inputs[i];
+            if (e.type != "text") continue; // пропускаем элементы input, которые не поля вводов
+            if (e.dataset.charsAllowed == undefined) continue; // пропускаем элементы у которых нет атрибута data-chars-allowed
+
+            // dataset - свойство, дающее возможность обратиться к атрибутам data-*
+            // другой способ получения атрибута
+            //if(e.getAttribute("data-chars-allowed") == undefined)
+
+            e.addEventListener("keypress", keyFilter, false);
+        }
+
+        function keyFilter(e) {
+            if (!e) e = window.event;
+
+            // если нажата функциональная клавиша или введена управляющая последовательность (например, нажата клавиша Enter)
+            if (e.charCode == 0 || e.charCode < 32) return true;
+
+            var allowedText = e.target.dataset.charsAllowed;
+            var element = e.target.dataset.messageId; // элемент, который необходимо отобразить в случае ошибки
+
+            var symbol = String.fromCharCode(e.charCode).toLowerCase();
+
+            if (allowedText.search(symbol) == -1) {
+                if (element) {
+                    element = document.getElementById(element);
+                    element.style.visibility = "visible";
+                }
+                // отменяем ввод символа в поле ввода
+                e.preventDefault();
+                return false;
+            }
+            else {
+                if (element) {
+                    element = document.getElementById(element);
+                    element.style.visibility = "hidden";
+                }
+                return true;
+            }
+        }
+    }
+
+
+
+
+
+
+
 

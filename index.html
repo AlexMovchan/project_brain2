@@ -11,6 +11,11 @@
     <div id='adware'>
         <button id='closeBtn'>X</button>
     </div>
+    
+    <div id='consult'>
+        <button class='consultBtn firstConsultBtn'>X</button>
+        <button class='consultBtn'>Don't Ask Anymore</button>
+    </div>
    
    <div id='navbar'>
         <span id='logo'><a href='#'>Startup</a></span>
@@ -126,23 +131,38 @@
            <hr style='width:100px;'>
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
        </div>
-       <div id='formInput'>
-           <div class='firstInputPair'>
-               <input class='inputFormClass' placeholder="YOUR NAME">
-               <input class='inputFormClass' placeholder="YOUR E-MAIL">
+       
+<!-- ------------------------------Form Section ---------------------------------->   
+       
+       <form action="/test.html" method="post">
+           <div id='formInput'>
+               <div class='firstInputPair'>
+                   <input class='inputFormClass' type='text' placeholder="YOUR NAME" data-chars-allowed='abcdefghigklmnopqrstuvwxyz' />
+                   
+                   <input class='inputFormClass' type='text' placeholder="YOUR E-MAIL" data-chars-allowed='abcdefghigklmnopqrstuvwxyz' />
+               </div>
+               
+               <div class='secondInputPair'>
+                   <input class='inputFormClass' type='text' placeholder="YOUR SUBJECT" data-chars-allowed='abcdefghigklmnopqrstuvwxyz' />
+                   
+                   <input class='inputFormClass' type='text' placeholder="COMPANY NAME" data-chars-allowed='abcdefghigklmnopqrstuvwxyz' />
+               </div>
+               
+               <div class='thirdInputPair'>
+                   <textarea name="textarea" id="textarea" type='text' cols="30" rows="10"></textarea>
+               </div>
+               
+               <div class="fourthPair">
+                   <input type="submit" id="submit1" value="Отправить" />
+               </div>
            </div>
-           <div class='secondInputPair'>
-               <input class='inputFormClass' placeholder="YOUR SUBJECT">
-               <input class='inputFormClass' placeholder="COMPANY NAME">
-           </div>
-           <div class='thirdInputPair'>
-               <input id='textareaFormClass' type="textarea" placeholder="WRITE YOR TEXT" width='300px'>
-           </div>
-           <div class="fourthPair">
-               <input type='submit'>
-           </div>
-       </div>
+       </form>
+       
    </div>
+   
+   
+   
+   
    
    <footer>
        <div id='social'>
@@ -156,6 +176,8 @@
            © 2015 STARTUP DESIGNED BY SHAPED THEME
        </div>
    </footer>
+   
+   
    
    
     

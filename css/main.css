@@ -28,6 +28,32 @@ body {
     margin-top: 20px;
 }
 
+#consult {
+    position: fixed;
+    width: 300px;
+    height: 230px;
+    bottom: -200px;
+    right: 0; 
+    background-image: url(../img/consult.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+    border: solid black;
+}
+
+.consultBtn {
+    padding: 5px;
+    margin: 2px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 13px;
+}
+
+.firstConsultBtn{
+    float: left;
+    margin-right: 143px;
+}
+
 #navbar {
     visibility:hidden;
     width: 80%;
@@ -430,10 +456,21 @@ figure img {
     margin: 10px;
 }
 
-#textareaFormClass {
+#textarea{
     width: 100%;
-    height: 55px;
     margin: 10px;
+}
+#submit1 {
+    cursor: pointer;
+    margin: 5px 0 0 10px;
+    background: #f6f6f6;
+	box-shadow: inset 0px 20px 20px #ffffff;
+	padding: 8px 14px;
+	width: 120px;
+}
+
+#submit1:hover {
+	box-shadow: inset 1px 1px 30px #c0301c;
 }
 
 
@@ -479,6 +516,7 @@ footer {
     text-align: center;
     margin: 20px;
 }
+
 /* ------------------------  MAX WIDTH < 950px  --------------------------------- */
 
 
