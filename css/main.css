@@ -3,6 +3,31 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+#adware {
+    display: none;
+    width: 700px;
+    height: 250px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -350px;
+    background-image: url(../img/adware.png);
+    background-color: #ffe903;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+#closeBtn {
+    display: none;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
 #navbar {
     visibility:hidden;
     width: 80%;
@@ -158,18 +183,13 @@ figure img {
     border-radius: 50%;
 }
 
-.thirdFigureImg {
+#thirdFigureImg {
     width: 95px;
     height: 95px;
     background-image: url(../img/EllipseSupport1.png);
     background-size: cover;
     border: solid grey;
     border-radius: 50%;
-}
-
-.thirdFigureImg:hover {
-    background-image: url(../img/EllipseSupport2.png);
-    background-color: #c0301c;
 }
 
 .firstFigureImg {
@@ -184,12 +204,6 @@ figure img {
     margin: auto;
     font-size: 52px;
 }
-
-.firstFigureImg:hover {
-    background-color: #c0301c;
-    color: white;
-}
-
 
 #paralax {
     height: 370px;
@@ -209,7 +223,262 @@ figure img {
     text-align: center;
 }
 
+/* ------------------------ Section PORTFOLIO ---------------------*/
+#navbar2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
 
+#navbar2 ul li {
+    display: inline-block;
+}
+
+#works {
+    display: none;
+}
+
+#worksNav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#worksNav h3 {
+    flex: 1 100%;
+    text-align: center;
+}
+
+#worksNav #navbar2 {
+    flex: 1 100%;
+}
+
+#navbar2 ul li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+}
+
+#navbar2 ul li a:hover {
+    color: red;
+    background-color: #4e4e4e;
+}
+
+.worksImgContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 30px 0;
+    
+}
+
+.worksImgPair {
+    display: flex;
+    flex: 1 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+.worksImg {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+}
+
+
+
+#img1 {background-image: url(../img/work1.png); background-size: cover; background-position: center;}
+#img2 {background-image: url(../img/work2.png); background-size: cover; background-position: center;}
+#img3 {background-image: url(../img/work3.png); background-size: cover; background-position: center;}
+#img4 {background-image: url(../img/work4.png); background-size: cover; background-position: center;}
+#img5 {background-image: url(../img/work5.png); background-size: cover; background-position: center;}
+#img6 {background-image: url(../img/work6.png); background-size: cover; background-position: center;}
+#img7 {background-image: url(../img/work7.png); background-size: cover; background-position: center;}
+#img8 {background-image: url(../img/work8.png); background-size: cover; background-position: center;}
+#img9 {background-image: url(../img/work9.png); background-size: cover; background-position: center;}
+
+.ghostButton3 {
+    display: none;
+    width: 100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -70px;
+    padding: 15px;
+    color: #f50e0e;
+    background-color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+}
+
+.ghostButton3:hover {
+    background-color: #777777;
+}
+
+#img1:hover {
+    box-shadow: 0 0 0 300px rgba(256, 0, 0, 0.33) inset;
+}
+#img1:hover .ghostButton3 {
+    display: block;
+}
+
+#img2:hover {
+    box-shadow: 0 0 0 300px rgba(256, 0, 0, 0.33) inset;
+}
+#img2:hover .ghostButton3 {
+    display: block;
+}
+
+#img3:hover {
+    box-shadow: 0 0 0 300px rgba(256, 0, 0, 0.33) inset;
+}
+#img3:hover .ghostButton3 {
+    display: block;
+}
+
+#img4:hover {
+    box-shadow: 0 0 0 300px rgba(256, 0, 0, 0.33) inset;
+}
+#img4:hover .ghostButton3 {
+    display: block;
+}
+
+#img5:hover {
+    box-shadow: 0 0 0 300px rgba(256, 0, 0, 0.33) inset;
+}
+#img5:hover .ghostButton3 {
+    display: block;
+}
+
+#img6:hover {
+    box-shadow: 0 0 0 300px rgba(256, 0, 0, 0.33) inset;
+}
+#img6:hover .ghostButton3 {
+    display: block;
+}
+
+#img7:hover {
+    box-shadow: 0 0 0 300px rgba(256, 0, 0, 0.33) inset;
+}
+#img7:hover .ghostButton3 {
+    display: block;
+}
+
+#img8:hover {
+    box-shadow: 0 0 0 300px rgba(256, 0, 0, 0.33) inset;
+}
+#img8:hover .ghostButton3 {
+    display: block;
+}
+
+#img9:hover {
+    box-shadow: 0 0 0 300px rgba(256, 0, 0, 0.33) inset;
+}
+#img9:hover .ghostButton3 {
+    display: block;
+}
+
+
+
+#formContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#formHeader {
+    flex: 1 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.firstInputPair {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 1 100%;
+}
+.secondInputPair {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 1 100%;
+}
+.thirdInputPair {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 1 100%;
+}
+
+.inputFormClass {
+    width: 320px;
+    height: 25px;
+    margin: 10px;
+}
+
+#textareaFormClass {
+    width: 100%;
+    height: 55px;
+    margin: 10px;
+}
+
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 300px;
+    background-color: #c0301c;
+    align-content: center;
+}
+
+#social {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 1 100%;
+    margin: 20px;
+}
+
+.socialContainer {
+    width: 55px;
+    height: 55px;
+    margin: 15px;
+    background-image: url(../img/social.png);
+}
+
+.socialImg1 {background-position: 0px -67px;}
+.socialImg1:hover {background-position: 0px 0;}
+
+.socialImg2 {background-position: -60px 55px;}
+.socialImg2:hover {background-position: -60px 0;}
+
+.socialImg3 {background-position: -120px 55px;}
+.socialImg3:hover {background-position: -120px 0;}
+
+.socialImg4 {background-position: -183px 55px;}
+.socialImg4:hover {background-position: -183px 0;}
+
+
+#footerText {
+    flex: 1 100%;
+    text-align: center;
+    margin: 20px;
+}
 /* ------------------------  MAX WIDTH < 950px  --------------------------------- */
 
 
