@@ -80,7 +80,7 @@ window.onload = function() {
     function scrollTopButton(){
         counter += 10;
         document.body.scrollTop = counter;
-        if(counter == 900){
+        if(counter == window.innerHeight){
             clearInterval(scrollTimer);
             counter = 0;
         }
