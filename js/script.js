@@ -74,13 +74,13 @@ window.onload = function() {
     }
     
     
-    
+    console.log(window.innerHeight)
     var scrollTimer;
     var counter = 0;
     function scrollTopButton(){
         counter += 10;
         document.body.scrollTop = counter;
-        if(counter == window.innerHeight){
+        if(counter == window.innerHeight || counter > window.innerHeight){
             clearInterval(scrollTimer);
             counter = 0;
         }

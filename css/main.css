@@ -174,11 +174,12 @@ body {
 }
 
 #services {
-    min-height: 570px;
+    min-height: 470px;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     align-content: space-around;
+    margin: 50px 0;
 }
 
 #servicesText {
@@ -517,6 +518,7 @@ footer {
     margin: 20px;
 }
 
+
 /* ------------------------  MAX WIDTH < 950px  --------------------------------- */
 
 
@@ -526,6 +528,7 @@ footer {
     padding: 14px 4px;
     font-size: 14px;
 } 
+
     
 }
 
